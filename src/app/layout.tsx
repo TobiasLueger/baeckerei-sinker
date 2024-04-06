@@ -25,7 +25,9 @@ export default function RootLayout({
           videoSrc="/video/hero/baeckerei-sinker.webm"
           heroImage="/img/hero/baecker-hero.jpg"
         />
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
