@@ -12,7 +12,7 @@ function Hero({ title, heroImage, videoSrc }: HeroProps) {
                 </div>
             </div>
             <div className="col-span-12 lg:col-span-5 xl:col-span-7 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <Image src={heroImage} alt={"test"} width="374" height="498" className="opacity-75"/>
+                <Image src={heroImage} alt={"test"} width="374" height="498" className="brightness-75"/>
                 <h2 className="mb-8 text-[5rem] font-headline text-gray-100 dark:text-gray-100 [text-shadow:_4px_3px_10px_rgb(0_0_0_/_16%)] absolute top-1/2 left1/2 -translate-x-1/2 -translate-y-1/2">
                     {title}
                 </h2>
