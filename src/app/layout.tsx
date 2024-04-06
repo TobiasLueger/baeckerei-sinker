@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Hero from "@/components/Hero/Hero";
+import Navigation from "@/components/Navigation/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +17,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="de">
+      <body className={inter.className}>
+        <Navigation/>
+        <Hero
+          title="Tradition seit über 50 Jahren"
+          videoSrc="/video/hero/baeckerei-sinker.webm"
+          heroImage="/img/hero/baecker-hero.jpg"
+        />
+        {children}
+      </body>
     </html>
   );
 }
