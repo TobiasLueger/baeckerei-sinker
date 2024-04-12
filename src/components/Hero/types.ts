@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 export interface HeroProps {
-    title: string,
+    title: ReactNode,
     videoSrc: string,
     heroImage: string,
 }
