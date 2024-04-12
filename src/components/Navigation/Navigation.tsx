@@ -2,10 +2,29 @@
 import { CellSignalLow } from "@phosphor-icons/react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Navigation() {
     const [openMenu, setOpenMenu] = useState(false)
+
+    const [scrolled, setScrolled] = useState(false);
+
+    const handleScroll = () => {
+        if (window.pageYOffset > window.innerHeight) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
 
     const toggleMenu = () => {
         setOpenMenu(!openMenu);
@@ -13,7 +32,7 @@ function Navigation() {
 
     return (
         <>
-            <div className="fixed w-full left-0 top-0 py-[1.781rem] px-12 dark:bg-[#2E2E2D] z-50 flex justify-between items-center">
+            <div className={`fixed w-full left-0 top-0 py-[1.781rem] px-12 dark:bg-[#2E2E2D] z-50 flex justify-between items-center transition-all ${scrolled? "bg-[#1B1A18]" : ""}`}>
                 <Link  href="/" className="hover:scale-105 transition-all">
                     <Image width={"89"} height={"48"} src={"/img/logo/logo-brown-white.svg"} alt={""} priority/>
                 </Link>
