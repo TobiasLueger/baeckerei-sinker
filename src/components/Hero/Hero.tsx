@@ -6,7 +6,7 @@ function Hero({ title, heroImage, videoSrc }: HeroProps) {
         <div className="grid grid-cols-12 items-stretch gap-8 relative">
             <div className="col-span-12 after:content after:w-full after:h-full after:bg-black/[.75] after:absolute after:top-0 after:left-0">
                 <div className="h-screen overflow-hidden">
-                    <video autoPlay muted loop className="h-full w-full object-cover">
+                    <video autoPlay muted loop poster="/video/hero/default.jpg" className="h-full w-full object-cover">
                         <source src={videoSrc} type="video/webm" />
                     </video>
                 </div>
