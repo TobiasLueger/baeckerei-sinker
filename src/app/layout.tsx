@@ -21,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navigation/>
         {children}
+        {/* TODO: <Footer /> */}
       </body>
     </html>
   );

@@ -36,7 +36,7 @@ export default function Home() {
           bgImg="second"
           partner={true}
         />
-        <div className="bg-black h-56 text-white"></div>
+        <div className="bg-black h-56 text-white">Ausbildung</div>
       </main>
     </>
   );
